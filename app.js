@@ -12,7 +12,7 @@ let monthBill = 16;
 
 const changeBilling = () => {
   if (billingType === "monthly") {
-    if (window.matchMedia("(max-width: 480px)")) {
+    if (window.matchMedia("(max-width: 480px)").matches) {
       BILLING_CHOOSER_BALL.style.left = "20px";
     } else {
       BILLING_CHOOSER_BALL.style.left = "25px";
