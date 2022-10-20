@@ -1,0 +1,343 @@
+:root {
+  --color-white: white;
+
+  --color-soft-cyan: hsl(174, 77%, 80%);
+  --color-strong-cyan: hsl(174, 86%, 45%);
+  --color-strongest-cyan: hsl(174, 85%, 38%);
+  --color-light-grayish-red: hsl(14, 92%, 95%);
+  --color-light-red: hsl(15, 100%, 70%);
+  --color-pale-blue: hsl(226, 100%, 87%);
+
+  --color-very-pale-blue: hsl(230, 100%, 99%);
+  --color-grayish-blue: hsl(224, 65%, 95%);
+  --color-light-grayish-blue: hsl(223, 50%, 87%);
+  --color-grayish-blue: hsl(225, 20%, 60%);
+  --color-dark-blue: hsl(227, 35%, 25%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Manrope", sans-serif;
+  background-image: url(/images/bg-pattern.svg);
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  background-image: url(/images/pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 50%;
+  height: 175px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+header h1 {
+  padding-top: 40px;
+  font-size: 25px;
+}
+
+header p {
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+
+main {
+  background-color: var(--color-white);
+  width: 600px;
+  min-width: 600px;
+  height: 50%;
+
+  border-radius: 10px;
+  box-shadow: 0px 5px 30px var(--color-light-grayish-blue);
+}
+
+.price_info {
+  width: 100%;
+  height: 30%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.price_info_pageviews {
+  color: var(--color-grayish-blue);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.price_info_price {
+  min-width: 190px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.price_info_price div:nth-child(1) {
+  font-size: 34px;
+  font-weight: 800;
+
+  color: var(--color-dark-blue);
+}
+.price_info_price div:nth-child(2) {
+  font-size: 15px;
+  color: var(--color-grayish-blue);
+  letter-spacing: 2px;
+}
+.chooser {
+  position: relative;
+  width: 100%;
+  height: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chooser input {
+  cursor: pointer;
+  appearance: none;
+  width: 80%;
+  height: 10px;
+
+  background-color: var(--color-light-grayish-blue);
+  border-radius: 5px;
+
+  transition: background-color 0.3s;
+}
+.chooser .placeholder {
+  position: absolute;
+  left: 10%;
+  width: calc(480px * 0.5 - 20px);
+  height: 10px;
+  background-color: var(--color-strong-cyan);
+  border-radius: 5px 0px 0px 5px;
+
+  cursor: pointer;
+}
+.chooser input::-webkit-slider-thumb {
+  position: relative;
+  appearance: none;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: var(--color-strong-cyan);
+  background-image: url(/images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 100%;
+  box-shadow: 0px 15px 20px var(--color-soft-cyan);
+
+  transition: background-color 0.3s;
+}
+.chooser input::-webkit-slider-thumb:hover {
+  background-color: var(--color-strongest-cyan);
+}
+.billing {
+  padding-left: 25%;
+  padding-right: 10%;
+  width: 100%;
+  height: 15%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  color: var(--color-grayish-blue);
+  font-size: 14px;
+}
+.billing_chooser {
+  position: relative;
+  width: 50px;
+  height: 30px;
+
+  border: none;
+  border-radius: 15px;
+  background-color: var(--color-light-grayish-blue);
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.billing_chooser:hover {
+  background-color: var(--color-strong-cyan);
+}
+.billing_chooser_ball {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 100%;
+  background-color: var(--color-white);
+
+  transition: left 0.3s;
+}
+.billing_discount {
+  border-radius: 15px;
+  background-color: var(--color-light-grayish-red);
+  color: var(--color-light-red);
+
+  width: 110px;
+  height: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer_info {
+  width: 100%;
+  height: 35%;
+
+  border-top: 1.5px solid var(--color-light-grayish-blue);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.offer_info_assets {
+  height: 70%;
+  width: 40%;
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.offer_info_assets p {
+  background-image: url(/images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+
+  padding-left: 20px;
+
+  color: var(--color-grayish-blue);
+}
+.start_trial {
+  border: none;
+  width: 175px;
+  height: 40px;
+
+  color: var(--color-light-grayish-blue);
+  font-family: "Manrope", sans-serif;
+
+  background-color: var(--color-dark-blue);
+  border-radius: 30px;
+
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.start_trial:hover {
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    width: 80%;
+  }
+  header h1 {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  header p {
+    width: 70%;
+    font-size: 12px;
+    text-align: center;
+  }
+  main {
+    width: 300px;
+    min-width: 300px;
+    height: 450px;
+  }
+
+  .price_info {
+    width: 100%;
+    height: 25%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .chooser .placeholder {
+    width: calc(240px * 0.5 - 20px);
+  }
+
+  .billing {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 20%;
+  }
+  .billing_monthly {
+    width: 70px;
+  }
+  .billing_yearly {
+    padding-left: 15px;
+  }
+  .billing_chooser {
+    position: relative;
+    width: 50px;
+    height: 30px;
+  }
+
+  .billing_chooser_ball {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 100%;
+    background-color: var(--color-white);
+
+    transition: left 0.3s;
+  }
+  .billing_discount {
+    width: 90px;
+    height: 45px;
+
+    text-align: center;
+  }
+
+  .offer_info {
+    height: 30%;
+    padding-left: 10px;
+
+    flex-direction: column;
+  }
+  .offer_info_assets {
+    width: 60%;
+  }
+
+  .offer_info_assets p {
+    font-size: 15px;
+  }
+}
